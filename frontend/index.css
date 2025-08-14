@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme palette - cherry red focus */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 350 85% 54%; /* cherry red */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --secondary-text: 350, 25%, 35%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 350 100% 97%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 350 85% 54%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark theme palette - cherry red */
+    --background: 222 47% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 222 47% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 350 85% 66%;
+    --primary-foreground: 222 47% 8%;
+
+    --secondary: 222 20% 16%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 222 20% 16%;
+    --muted-foreground: 220 13% 69%;
+
+    --accent: 350 40% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 20% 20%;
+    --input: 222 20% 20%;
+    --ring: 350 85% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(1200px 600px at 10% -10%, rgba(244, 63, 94, 0.18), rgba(255, 255, 255, 0)),
+      radial-gradient(900px 500px at 90% 10%, rgba(236, 72, 153, 0.18), rgba(255, 255, 255, 0));
+    background-attachment: fixed;
+  }
+}
